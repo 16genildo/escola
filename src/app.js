@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-// Configuração da sessão
+// Configuração da sessão - APENAS UMA VEZ
 app.use(session({
     secret: process.env.SESSION_SECRET || 'uma_chave_secreta_muito_segura',
     resave: false,
@@ -30,6 +30,7 @@ app.use(session({
         ttl: 24 * 60 * 60 // 1 dia
     }),
     cookie: {
+        // Use secure true somente em produção (https)
         secure: process.env.NODE_ENV === 'production',
         maxAge: 24 * 60 * 60 * 1000 // 1 dia
     }
@@ -72,10 +73,8 @@ async function createDefaultUser() {
 // Conexão com o MongoDB e inicialização
 connectDB()
     .then(async () => {
-        // Criar usuário padrão se não existir
         await createDefaultUser();
         
-        // Iniciar o servidor apenas após a conexão e criação do usuário
         const PORT = process.env.PORT || 3000;
         app.listen(PORT, () => {
             console.log(`Servidor rodando na porta ${PORT}`);
@@ -100,18 +99,4 @@ app.use('/designacoes', designacoesRoutes);
 // Rota principal
 app.get('/', (req, res) => {
     res.redirect('/designacoes');
-}); 
-
-app.get('/sessao', (req, res) => {
-    console.log('Cookies recebidos:', req.headers.cookie);
-
-    if (!req.session.userId) {
-        return res.json({ loggedIn: false, message: 'Usuário não está logado' });
-    }
-    res.json({
-        loggedIn: true,
-        userId: req.session.userId,
-        nome: req.session.nome,
-        isAdmin: req.session.isAdmin
-    });
 });
