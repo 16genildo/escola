@@ -8,6 +8,7 @@ async function carregarDesignacoesPorData(filtro = {}) {
     const designacoes = await Designacao.find(filtro)
         .populate('estudante')
         .populate('parte')
+        .populate('ajudante')
         .sort('data');
 
     // Agrupar designações por data
