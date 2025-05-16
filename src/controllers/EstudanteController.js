@@ -20,19 +20,28 @@ module.exports = {
   },
 
   // Formulário de novo estudante
-  async new(req, res) {
-    res.render('layout', { 
-      template: 'pages/estudante-form'
-    });
+  async novo(req, res) {
+    try {
+      res.render('layout', { 
+        template: 'pages/estudante-form',
+        estudante: null,
+        error: null
+      });
+    } catch (error) {
+      console.error('Erro ao carregar formulário:', error);
+      res.redirect('/estudantes');
+    }
   },
 
   // Criar estudante
-  async create(req, res) {
+  async criar(req, res) {
     try {
       const estudanteData = {
         nome: req.body.nome,
         genero: req.body.genero,
-        sala: req.body.sala || null
+        sala: req.body.sala || null,
+        totalDesignacoes: 0,
+        ultimaDesignacao: null
       };
       
       await Estudante.create(estudanteData);
@@ -41,18 +50,23 @@ module.exports = {
       console.error('Erro ao criar estudante:', error);
       res.render('layout', { 
         template: 'pages/estudante-form',
+        estudante: req.body,
         error: 'Erro ao criar estudante.'
       });
     }
   },
 
   // Formulário de edição
-  async edit(req, res) {
+  async editar(req, res) {
     try {
       const estudante = await Estudante.findById(req.params.id);
+      if (!estudante) {
+        throw new Error('Estudante não encontrado');
+      }
       res.render('layout', { 
         template: 'pages/estudante-form',
-        estudante 
+        estudante,
+        error: null
       });
     } catch (error) {
       console.error('Erro ao carregar edição:', error);
@@ -61,7 +75,7 @@ module.exports = {
   },
 
   // Atualizar estudante
-  async update(req, res) {
+  async atualizar(req, res) {
     try {
       const estudanteData = {
         nome: req.body.nome,
@@ -69,23 +83,28 @@ module.exports = {
         sala: req.body.sala || null
       };
       
-      await Estudante.findByIdAndUpdate(req.params.id, estudanteData);
+      const estudante = await Estudante.findByIdAndUpdate(req.params.id, estudanteData, { new: true });
+      if (!estudante) {
+        throw new Error('Estudante não encontrado');
+      }
       res.redirect('/estudantes');
     } catch (error) {
       console.error('Erro ao atualizar:', error);
-      const estudante = await Estudante.findById(req.params.id);
       res.render('layout', { 
         template: 'pages/estudante-form',
-        estudante,
+        estudante: { ...req.body, _id: req.params.id },
         error: 'Erro ao atualizar estudante.'
       });
     }
   },
 
   // Remover estudante
-  async delete(req, res) {
+  async excluir(req, res) {
     try {
-      await Estudante.findByIdAndDelete(req.params.id);
+      const estudante = await Estudante.findByIdAndDelete(req.params.id);
+      if (!estudante) {
+        throw new Error('Estudante não encontrado');
+      }
       res.redirect('/estudantes');
     } catch (error) {
       console.error('Erro ao remover:', error);

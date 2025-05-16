@@ -3,10 +3,16 @@
         <div class="card">
             <div class="card-body">
                 <h1 class="card-title text-center mb-4">
-                    <%= typeof estudante !== 'undefined' ? 'Editar' : 'Novo' %> Estudante
+                    <%= estudante ? 'Editar' : 'Novo' %> Estudante
                 </h1>
 
-                <form action="<%= typeof estudante !== 'undefined' ? '/estudantes/' + estudante._id + '?_method=PUT' : '/estudantes' %>" 
+                <% if (typeof error !== 'undefined' && error) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= error %>
+                    </div>
+                <% } %>
+
+                <form action="<%= estudante && estudante._id ? '/estudantes/' + estudante._id + '?_method=PUT' : '/estudantes' %>" 
                       method="POST">
                     
                     <div class="mb-3">
@@ -15,7 +21,7 @@
                                class="form-control" 
                                id="nome" 
                                name="nome" 
-                               value="<%= typeof estudante !== 'undefined' ? estudante.nome : '' %>"
+                               value="<%= estudante ? estudante.nome : '' %>"
                                required>
                     </div>
 
@@ -28,7 +34,7 @@
                                        name="genero" 
                                        id="generoM" 
                                        value="M"
-                                       <%= typeof estudante !== 'undefined' && estudante.genero === 'M' ? 'checked' : '' %>
+                                       <%= estudante && estudante.genero === 'M' ? 'checked' : '' %>
                                        required>
                                 <label class="form-check-label" for="generoM">
                                     Masculino
@@ -40,7 +46,7 @@
                                        name="genero" 
                                        id="generoF" 
                                        value="F"
-                                       <%= typeof estudante !== 'undefined' && estudante.genero === 'F' ? 'checked' : '' %>
+                                       <%= estudante && estudante.genero === 'F' ? 'checked' : '' %>
                                        required>
                                 <label class="form-check-label" for="generoF">
                                     Feminino
@@ -53,10 +59,10 @@
                         <label for="sala" class="form-label">Sala</label>
                         <select class="form-select" id="sala" name="sala">
                             <option value="">Selecione uma sala</option>
-                            <option value="A" <%= typeof estudante !== 'undefined' && estudante.sala === 'A' ? 'selected' : '' %>>
+                            <option value="A" <%= estudante && estudante.sala === 'A' ? 'selected' : '' %>>
                                 Sala A
                             </option>
-                            <option value="B" <%= typeof estudante !== 'undefined' && estudante.sala === 'B' ? 'selected' : '' %>>
+                            <option value="B" <%= estudante && estudante.sala === 'B' ? 'selected' : '' %>>
                                 Sala B
                             </option>
                         </select>

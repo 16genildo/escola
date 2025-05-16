@@ -10,6 +10,7 @@ module.exports = {
         partes 
       });
     } catch (error) {
+      console.error('Erro ao carregar partes:', error);
       res.render('layout', { 
         template: 'pages/partes',
         partes: [],
@@ -19,59 +20,92 @@ module.exports = {
   },
 
   // Formulário de nova parte
-  new(req, res) {
-    res.render('layout', { 
-      template: 'pages/parte-form'
-    });
+  async novo(req, res) {
+    try {
+      res.render('layout', { 
+        template: 'pages/parte-form',
+        parte: null,
+        error: null
+      });
+    } catch (error) {
+      console.error('Erro ao carregar formulário:', error);
+      res.redirect('/partes');
+    }
   },
 
   // Criar parte
-  async create(req, res) {
+  async criar(req, res) {
     try {
-      await Parte.create(req.body);
+      const parteData = {
+        nome: req.body.nome,
+        descricao: req.body.descricao,
+        generoPreferido: req.body.generoPreferido || null
+      };
+      
+      await Parte.create(parteData);
       res.redirect('/partes');
     } catch (error) {
+      console.error('Erro ao criar parte:', error);
       res.render('layout', { 
         template: 'pages/parte-form',
+        parte: req.body,
         error: 'Erro ao criar parte.'
       });
     }
   },
 
   // Formulário de edição
-  async edit(req, res) {
+  async editar(req, res) {
     try {
       const parte = await Parte.findById(req.params.id);
+      if (!parte) {
+        throw new Error('Parte não encontrada');
+      }
       res.render('layout', { 
         template: 'pages/parte-form',
-        parte 
+        parte,
+        error: null
       });
     } catch (error) {
+      console.error('Erro ao carregar edição:', error);
       res.redirect('/partes');
     }
   },
 
   // Atualizar parte
-  async update(req, res) {
+  async atualizar(req, res) {
     try {
-      await Parte.findByIdAndUpdate(req.params.id, req.body);
+      const parteData = {
+        nome: req.body.nome,
+        descricao: req.body.descricao,
+        generoPreferido: req.body.generoPreferido || null
+      };
+      
+      const parte = await Parte.findByIdAndUpdate(req.params.id, parteData, { new: true });
+      if (!parte) {
+        throw new Error('Parte não encontrada');
+      }
       res.redirect('/partes');
     } catch (error) {
-      const parte = await Parte.findById(req.params.id);
+      console.error('Erro ao atualizar:', error);
       res.render('layout', { 
         template: 'pages/parte-form',
-        parte,
+        parte: { ...req.body, _id: req.params.id },
         error: 'Erro ao atualizar parte.'
       });
     }
   },
 
   // Remover parte
-  async delete(req, res) {
+  async excluir(req, res) {
     try {
-      await Parte.findByIdAndDelete(req.params.id);
+      const parte = await Parte.findByIdAndDelete(req.params.id);
+      if (!parte) {
+        throw new Error('Parte não encontrada');
+      }
       res.redirect('/partes');
     } catch (error) {
+      console.error('Erro ao remover:', error);
       res.redirect('/partes');
     }
   }

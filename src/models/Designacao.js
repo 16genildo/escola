@@ -1,5 +1,22 @@
 const mongoose = require('mongoose');
 
+const avaliacaoSchema = new mongoose.Schema({
+    pontos: {
+        type: Number,
+        required: true,
+        min: 0,
+        max: 5
+    },
+    comentarios: {
+        type: String,
+        trim: true
+    },
+    data: {
+        type: Date,
+        default: Date.now
+    }
+});
+
 const designacaoSchema = new mongoose.Schema({
   data: { 
     type: Date, 
@@ -30,29 +47,16 @@ const designacaoSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
-  observacoes: String,
+  observacoes: {
+    type: String,
+    trim: true
+  },
   ajudante: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Estudante',
     default: null
   },
-  // Campos de avaliação
-  avaliacao: {
-    realizada: {
-      type: Boolean,
-      default: false
-    },
-    data: Date,
-    pontuacao: {
-      type: Number,
-      min: 1,
-      max: 5,
-      default: null
-    },
-    comentarios: String,
-    pontosFortes: [String],
-    pontosAMelhorar: [String]
-  }
+  avaliacao: avaliacaoSchema
 }, {
   timestamps: true
 });

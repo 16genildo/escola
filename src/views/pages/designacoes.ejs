@@ -2,52 +2,10 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>Designações</h1>
         <div>
-            <a href="/designacoes/new" class="btn btn-primary">Nova Designação</a>
-        </div>
-    </div>
-
-    <!-- Filtros e Ações -->
-    <div class="card mb-4">
-        <div class="card-body">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h5 class="card-title mb-3">Filtrar por Sala</h5>
-                    <div class="btn-group" role="group">
-                        <a href="/designacoes" 
-                           class="btn btn-outline-primary <%= !salaFiltro ? 'active' : '' %>">
-                            Todas
-                        </a>
-                        <a href="/designacoes?sala=A" 
-                           class="btn btn-outline-primary <%= salaFiltro === 'A' ? 'active' : '' %>">
-                            Sala A
-                        </a>
-                        <a href="/designacoes?sala=B" 
-                           class="btn btn-outline-primary <%= salaFiltro === 'B' ? 'active' : '' %>">
-                            Sala B
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 text-md-end mt-3 mt-md-0">
-                    <h5 class="card-title mb-3">Baixar PDF</h5>
-                    <div class="btn-group" role="group">
-                        <a href="/designacoes/pdf" 
-                           class="btn btn-success"
-                           target="_blank">
-                            <i class="bi bi-file-pdf"></i> Todas as Designações
-                        </a>
-                        <a href="/designacoes/pdf?sala=A" 
-                           class="btn btn-outline-success"
-                           target="_blank">
-                            <i class="bi bi-file-pdf"></i> Sala A
-                        </a>
-                        <a href="/designacoes/pdf?sala=B" 
-                           class="btn btn-outline-success"
-                           target="_blank">
-                            <i class="bi bi-file-pdf"></i> Sala B
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <a href="/designacoes/novo" class="btn btn-primary">Nova Designação</a>
+            <a href="/designacoes/pdf<%= salaFiltro ? '?sala=' + salaFiltro : '' %>" class="btn btn-secondary ms-2">
+                <i class="bi bi-file-pdf"></i> Gerar PDF
+            </a>
         </div>
     </div>
 
@@ -57,168 +15,84 @@
         </div>
     <% } %>
 
-    <% if (datas.length === 0) { %>
-        <div class="alert alert-info">
-            Nenhuma designação encontrada<%= salaFiltro ? ' para a Sala ' + salaFiltro : '' %>.
+    <div class="mb-4">
+        <div class="btn-group" role="group">
+            <a href="/designacoes" 
+               class="btn btn-outline-primary <%= !salaFiltro ? 'active' : '' %>">
+                Todas
+            </a>
+            <a href="/designacoes?sala=A" 
+               class="btn btn-outline-primary <%= salaFiltro === 'A' ? 'active' : '' %>">
+                Sala A
+            </a>
+            <a href="/designacoes?sala=B" 
+               class="btn btn-outline-primary <%= salaFiltro === 'B' ? 'active' : '' %>">
+                Sala B
+            </a>
         </div>
-    <% } %>
+    </div>
 
-    <% datas.forEach(data => { %>
-        <div class="card mb-4">
-            <div class="card-header bg-primary text-white">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <h4 class="mb-0">Data</h4>
-                        <h2 class="mb-0"><%= data.data %></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body p-0">
-                <% ['A', 'B'].forEach(salaAtual => { %>
-                    <% const designacoesSala = data.designacoes.filter(d => d.sala === salaAtual); %>
-                    <% if (designacoesSala.length > 0) { %>
-                        <div class="sala-section <%= salaAtual === 'B' ? 'border-top' : '' %>">
-                            <div class="sala-header bg-light p-3 border-bottom d-flex justify-content-between align-items-center">
-                                <h5 class="mb-0">Sala <%= salaAtual %></h5>
-                                <span class="badge bg-secondary"><%= designacoesSala.length %> designações</span>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table table-hover mb-0">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>Estudante</th>
-                                            <th>Parte</th>
-                                            <th>Ajudante</th>
-                                            <th>Status</th>
-                                            <th>Ações</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <% designacoesSala.forEach(designacao => { %>
-                                            <tr>
-                                                <td><%= designacao.estudante.nome %></td>
-                                                <td><%= designacao.parte.nome %></td>
-                                                <td><%= designacao.ajudante ? designacao.ajudante.nome : '-' %></td>
-                                                <td>
-                                                    <% if (designacao.avaliacao && designacao.avaliacao.realizada) { %>
-                                                        <span class="badge bg-success">
-                                                            Avaliado (<%= designacao.avaliacao.pontuacao %>/5)
-                                                        </span>
-                                                    <% } else { %>
-                                                        <span class="badge bg-warning text-dark">Pendente</span>
-                                                    <% } %>
-                                                </td>
-                                                <td>
-                                                    <div class="btn-group" role="group">
-                                                        <a href="/designacoes/<%= designacao._id %>/edit" 
-                                                           class="btn btn-sm btn-secondary">
-                                                            Editar
-                                                        </a>
-                                                        <a href="/designacoes/<%= designacao._id %>/avaliacao" 
-                                                           class="btn btn-sm <%= designacao.avaliacao && designacao.avaliacao.realizada ? 'btn-info' : 'btn-primary' %>">
-                                                            <%= designacao.avaliacao && designacao.avaliacao.realizada ? 'Ver Avaliação' : 'Avaliar' %>
-                                                        </a>
-                                                        
-                                                        <form action="/designacoes/<%= designacao._id %>?_method=DELETE" 
-                                                              method="POST" 
-                                                              style="display: inline;"
-                                                              onsubmit="return confirm('Tem certeza que deseja excluir esta designação?');">
-                                                            <button type="submit" class="btn btn-sm btn-danger">Excluir</button>
-                                                        </form>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        <% }) %>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    <% } %>
-                <% }) %>
-            </div>
-        </div>
-    <% }) %>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Sala</th>
+                    <th>Estudante</th>
+                    <th>Parte</th>
+                    <th>Ajudante</th>
+                    <th>Observações</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (!designacoesPorData || designacoesPorData.length === 0) { %>
+                    <tr>
+                        <td colspan="7" class="text-center">Nenhuma designação encontrada</td>
+                    </tr>
+                <% } else { %>
+                    <% designacoesPorData.forEach(([data, designacoes]) => { %>
+                        <% designacoes.forEach(designacao => { %>
+                            <tr>
+                                <td><%= data %></td>
+                                <td>Sala <%= designacao.sala %></td>
+                                <td><%= designacao.estudante.nome %></td>
+                                <td><%= designacao.parte.nome %></td>
+                                <td><%= designacao.ajudante ? designacao.ajudante.nome : '-' %></td>
+                                <td><%= designacao.observacoes || '-' %></td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a href="/designacoes/<%= designacao._id %>/editar" 
+                                           class="btn btn-sm btn-outline-primary">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <form action="/designacoes/<%= designacao._id %>?_method=DELETE" 
+                                              method="POST" 
+                                              style="display: inline;"
+                                              onsubmit="return confirm('Tem certeza que deseja excluir esta designação?');">
+                                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                        <% if (!designacao.avaliacao) { %>
+                                            <a href="/designacoes/<%= designacao._id %>/avaliacoes" 
+                                               class="btn btn-sm btn-outline-success">
+                                                <i class="bi bi-check-lg"></i>
+                                            </a>
+                                        <% } %>
+                                    </div>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    <% }) %>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <style>
 .btn-group .btn {
     margin-right: 0.25rem;
-}
-
-.badge {
-    font-size: 0.875rem;
-    padding: 0.5em 0.75em;
-}
-
-.card-header {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-.card-header h2 {
-    font-size: 1.75rem;
-    font-weight: 600;
-}
-
-.card-header h4 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    opacity: 0.8;
-}
-
-.sala-section {
-    position: relative;
-}
-
-.sala-section::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: var(--bs-primary);
-    opacity: 0.1;
-}
-
-.sala-header {
-    background-color: rgba(0, 0, 0, 0.02) !important;
-}
-
-.table {
-    margin-bottom: 0;
-}
-
-.table > :not(caption) > * > * {
-    padding: 1rem 0.75rem;
-}
-
-.border-top {
-    border-top: 1px solid rgba(0,0,0,0.125);
-}
-
-.table-hover tbody tr:hover {
-    background-color: rgba(var(--bs-primary-rgb), 0.05);
-}
-
-.table th {
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-}
-
-.badge.bg-secondary {
-    background-color: rgba(0, 0, 0, 0.1) !important;
-    color: var(--bs-gray-700) !important;
-}
-
-/* Estilos adicionais para os filtros */
-.btn-group {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.btn-outline-primary.active {
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
 }
 </style> 

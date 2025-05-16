@@ -67,5 +67,69 @@ module.exports = {
             console.error('Erro ao salvar avaliação:', error);
             res.redirect(`/designacoes/${req.params.id}/avaliacao`);
         }
+    },
+
+    // Criar avaliação
+    async criar(req, res) {
+        try {
+            const designacao = await Designacao.findById(req.params.id);
+            if (!designacao) {
+                return res.redirect('/designacoes');
+            }
+
+            const avaliacaoData = {
+                pontos: req.body.pontos,
+                comentarios: req.body.comentarios,
+                data: new Date()
+            };
+
+            designacao.avaliacao = avaliacaoData;
+            await designacao.save();
+
+            res.redirect('/designacoes');
+        } catch (error) {
+            console.error('Erro ao criar avaliação:', error);
+            res.redirect('/designacoes');
+        }
+    },
+
+    // Atualizar avaliação
+    async atualizar(req, res) {
+        try {
+            const designacao = await Designacao.findById(req.params.id);
+            if (!designacao) {
+                return res.redirect('/designacoes');
+            }
+
+            designacao.avaliacao = {
+                pontos: req.body.pontos,
+                comentarios: req.body.comentarios,
+                data: new Date()
+            };
+
+            await designacao.save();
+            res.redirect('/designacoes');
+        } catch (error) {
+            console.error('Erro ao atualizar avaliação:', error);
+            res.redirect('/designacoes');
+        }
+    },
+
+    // Excluir avaliação
+    async excluir(req, res) {
+        try {
+            const designacao = await Designacao.findById(req.params.id);
+            if (!designacao) {
+                return res.redirect('/designacoes');
+            }
+
+            designacao.avaliacao = undefined;
+            await designacao.save();
+
+            res.redirect('/designacoes');
+        } catch (error) {
+            console.error('Erro ao excluir avaliação:', error);
+            res.redirect('/designacoes');
+        }
     }
 }; 

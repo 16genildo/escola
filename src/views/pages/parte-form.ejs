@@ -3,10 +3,16 @@
         <div class="card">
             <div class="card-body">
                 <h1 class="card-title text-center mb-4">
-                    <%= typeof parte !== 'undefined' ? 'Editar' : 'Nova' %> Parte
+                    <%= parte ? 'Editar' : 'Nova' %> Parte
                 </h1>
 
-                <form action="<%= typeof parte !== 'undefined' ? '/partes/' + parte._id + '?_method=PUT' : '/partes' %>" 
+                <% if (typeof error !== 'undefined' && error) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= error %>
+                    </div>
+                <% } %>
+
+                <form action="<%= parte && parte._id ? '/partes/' + parte._id + '?_method=PUT' : '/partes' %>" 
                       method="POST">
                     
                     <div class="mb-3">
@@ -15,7 +21,7 @@
                                class="form-control" 
                                id="nome" 
                                name="nome" 
-                               value="<%= typeof parte !== 'undefined' ? parte.nome : '' %>"
+                               value="<%= parte ? parte.nome : '' %>"
                                required>
                     </div>
 
@@ -24,7 +30,7 @@
                         <textarea class="form-control" 
                                   id="descricao" 
                                   name="descricao" 
-                                  rows="3"><%= typeof parte !== 'undefined' ? parte.descricao : '' %></textarea>
+                                  rows="3"><%= parte ? parte.descricao : '' %></textarea>
                     </div>
 
                     <div class="mb-3">
@@ -36,7 +42,7 @@
                                        name="generoPreferido" 
                                        id="generoPreferidoM" 
                                        value="M"
-                                       <%= typeof parte !== 'undefined' && parte.generoPreferido === 'M' ? 'checked' : '' %>>
+                                       <%= parte && parte.generoPreferido === 'M' ? 'checked' : '' %>>
                                 <label class="form-check-label" for="generoPreferidoM">
                                     Masculino
                                 </label>
@@ -47,7 +53,7 @@
                                        name="generoPreferido" 
                                        id="generoPreferidoF" 
                                        value="F"
-                                       <%= typeof parte !== 'undefined' && parte.generoPreferido === 'F' ? 'checked' : '' %>>
+                                       <%= parte && parte.generoPreferido === 'F' ? 'checked' : '' %>>
                                 <label class="form-check-label" for="generoPreferidoF">
                                     Feminino
                                 </label>
@@ -58,7 +64,7 @@
                                        name="generoPreferido" 
                                        id="generoPreferidoNull" 
                                        value=""
-                                       <%= typeof parte === 'undefined' || !parte.generoPreferido ? 'checked' : '' %>>
+                                       <%= !parte || !parte.generoPreferido ? 'checked' : '' %>>
                                 <label class="form-check-label" for="generoPreferidoNull">
                                     Qualquer
                                 </label>

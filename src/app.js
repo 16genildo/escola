@@ -41,11 +41,18 @@ app.use(flash());
 
 // Middleware para variáveis globais
 app.use((req, res, next) => {
-    res.locals.user = req.session.userId ? {
+    // Sempre definir um usuário padrão na sessão
+    if (!req.session.userId) {
+        req.session.userId = 'default';
+        req.session.nome = 'Usuário';
+        req.session.isAdmin = true;
+    }
+    
+    res.locals.user = {
         id: req.session.userId,
         nome: req.session.nome,
         isAdmin: req.session.isAdmin
-    } : null;
+    };
     next();
 });
 
@@ -86,12 +93,10 @@ connectDB()
     });
 
 // Rotas
-const authRoutes = require('./routes/auth');
 const estudantesRoutes = require('./routes/estudantes');
 const partesRoutes = require('./routes/partes');
 const designacoesRoutes = require('./routes/designacoes');
 
-app.use('/', authRoutes);
 app.use('/estudantes', estudantesRoutes);
 app.use('/partes', partesRoutes);
 app.use('/designacoes', designacoesRoutes);

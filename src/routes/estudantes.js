@@ -3,25 +3,17 @@ const router = express.Router();
 const EstudanteController = require('../controllers/EstudanteController');
 const AuthController = require('../controllers/AuthController');
 
-// Proteger todas as rotas
-router.use(AuthController.requireAuth);
+// Rota de teste
+router.get('/teste', (req, res) => {
+    res.send('Rota de teste funcionando!');
+});
 
-// Listar todos os estudantes
+// Rotas de estudantes
 router.get('/', EstudanteController.index);
-
-// Formulário de novo estudante
-router.get('/new', EstudanteController.new);
-
-// Criar estudante
-router.post('/', EstudanteController.create);
-
-// Formulário de edição
-router.get('/:id/edit', EstudanteController.edit);
-
-// Atualizar estudante
-router.put('/:id', EstudanteController.update);
-
-// Remover estudante
-router.delete('/:id', EstudanteController.delete);
+router.get('/novo', EstudanteController.novo);
+router.post('/', EstudanteController.criar);
+router.get('/:id/editar', EstudanteController.editar);
+router.put('/:id', EstudanteController.atualizar);
+router.delete('/:id', EstudanteController.excluir);
 
 module.exports = router; 

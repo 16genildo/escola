@@ -2,7 +2,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>Estudantes</h1>
         <div>
-            <a href="/estudantes/new" class="btn btn-primary">Novo Estudante</a>
+            <a href="/estudantes/novo" class="btn btn-primary">Novo Estudante</a>
         </div>
     </div>
 
@@ -42,7 +42,7 @@
                         </td>
                         <td>
                             <div class="btn-group" role="group">
-                                <a href="/estudantes/<%= estudante._id %>/edit" 
+                                <a href="/estudantes/<%= estudante._id %>/editar" 
                                    class="btn btn-sm btn-outline-primary">Editar</a>
                                 
                                 <form action="/estudantes/<%= estudante._id %>?_method=DELETE" 
