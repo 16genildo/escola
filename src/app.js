@@ -101,3 +101,15 @@ app.use('/designacoes', designacoesRoutes);
 app.get('/', (req, res) => {
     res.redirect('/designacoes');
 }); 
+
+app.get('/sessao', (req, res) => {
+    if (!req.session.userId) {
+        return res.json({ loggedIn: false, message: 'Usuário não está logado' });
+    }
+    res.json({
+        loggedIn: true,
+        userId: req.session.userId,
+        nome: req.session.nome,
+        isAdmin: req.session.isAdmin
+    });
+});
