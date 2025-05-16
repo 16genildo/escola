@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Estudantes</h1>
+        <div>
+            <a href="/estudantes/new" class="btn btn-primary">Novo Estudante</a>
+        </div>
+    </div>
+
+    <% if (typeof error !== 'undefined') { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    <% } %>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Gênero</th>
+                    <th>Sala</th>
+                    <th>Total de Designações</th>
+                    <th>Última Designação</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% estudantes.forEach(estudante => { %>
+                    <tr>
+                        <td><%= estudante.nome %></td>
+                        <td>
+                            <span class="badge <%= estudante.genero === 'M' ? 'bg-primary' : 'bg-danger' %>">
+                                <%= estudante.genero === 'M' ? 'Masculino' : 'Feminino' %>
+                            </span>
+                        </td>
+                        <td><%= estudante.sala ? `Sala ${estudante.sala}` : '-' %></td>
+                        <td><%= estudante.totalDesignacoes %></td>
+                        <td>
+                            <%= estudante.ultimaDesignacao ? 
+                                new Date(estudante.ultimaDesignacao).toLocaleDateString('pt-BR') : 
+                                'Nunca designado' %>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a href="/estudantes/<%= estudante._id %>/edit" 
+                                   class="btn btn-sm btn-outline-primary">Editar</a>
+                                
+                                <form action="/estudantes/<%= estudante._id %>?_method=DELETE" 
+                                      method="POST" 
+                                      style="display: inline;"
+                                      onsubmit="return confirm('Tem certeza que deseja excluir este estudante?');">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">Excluir</button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+.btn-group .btn {
+    margin-right: 0.25rem;
+}
+
+.badge {
+    font-size: 0.875rem;
+    padding: 0.5em 0.75em;
+}
+</style> 

@@ -1,0 +1,92 @@
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-4">Avaliar Designação</h1>
+
+                <!-- Informações da Designação -->
+                <div class="mb-4">
+                    <h5>Detalhes da Designação</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><strong>Estudante:</strong> <%= designacao.estudante.nome %></p>
+                            <p><strong>Parte:</strong> <%= designacao.parte.nome %></p>
+                            <% if (designacao.ajudante) { %>
+                                <p><strong>Ajudante:</strong> <%= designacao.ajudante.nome %></p>
+                            <% } %>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Sala:</strong> <%= designacao.sala %></p>
+                            <p><strong>Data:</strong> <%= new Date(designacao.semanaInicio).toLocaleDateString() %></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário de Avaliação -->
+                <form action="/designacoes/<%= designacao._id %>/avaliacao" method="POST">
+                    <!-- Pontuação -->
+                    <div class="mb-3">
+                        <label class="form-label">Pontuação</label>
+                        <div class="rating">
+                            <% for(let i = 5; i >= 1; i--) { %>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="pontuacao" 
+                                           id="rating<%= i %>" value="<%= i %>" 
+                                           <%= designacao.avaliacao && designacao.avaliacao.pontuacao === i ? 'checked' : '' %>>
+                                    <label class="form-check-label" for="rating<%= i %>"><%= i %></label>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+                    <!-- Comentários -->
+                    <div class="mb-3">
+                        <label for="comentarios" class="form-label">Comentários Gerais</label>
+                        <textarea class="form-control" id="comentarios" name="comentarios" rows="3"><%= designacao.avaliacao ? designacao.avaliacao.comentarios : '' %></textarea>
+                    </div>
+
+                    <!-- Pontos Fortes -->
+                    <div class="mb-3">
+                        <label for="pontosFortes" class="form-label">Pontos Fortes</label>
+                        <input type="text" class="form-control" id="pontosFortes" name="pontosFortes" 
+                               placeholder="Separe os pontos fortes por vírgulas"
+                               value="<%= designacao.avaliacao ? designacao.avaliacao.pontosFortes.join(', ') : '' %>">
+                        <small class="form-text text-muted">Ex: boa leitura, voz clara, gestos adequados</small>
+                    </div>
+
+                    <!-- Pontos a Melhorar -->
+                    <div class="mb-3">
+                        <label for="pontosAMelhorar" class="form-label">Pontos a Melhorar</label>
+                        <input type="text" class="form-control" id="pontosAMelhorar" name="pontosAMelhorar" 
+                               placeholder="Separe os pontos a melhorar por vírgulas"
+                               value="<%= designacao.avaliacao ? designacao.avaliacao.pontosAMelhorar.join(', ') : '' %>">
+                        <small class="form-text text-muted">Ex: velocidade da fala, contato visual, preparação</small>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Salvar Avaliação</button>
+                        <a href="/designacoes" class="btn btn-outline-secondary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Adicionar estilos CSS -->
+<style>
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.rating .form-check-inline {
+    margin: 0;
+}
+
+.rating input[type="radio"] {
+    margin-right: 0.25rem;
+}
+</style> 
