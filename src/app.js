@@ -103,6 +103,8 @@ app.get('/', (req, res) => {
 }); 
 
 app.get('/sessao', (req, res) => {
+    console.log('Cookies recebidos:', req.headers.cookie);
+
     if (!req.session.userId) {
         return res.json({ loggedIn: false, message: 'Usuário não está logado' });
     }
