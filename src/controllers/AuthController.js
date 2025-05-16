@@ -1,8 +1,7 @@
-// controllers/AuthController.js
 const Usuario = require('../models/Usuario');
 
 module.exports = {
-    // Renderizar página de login (já existe)
+    // Renderizar página de login
     loginForm(req, res) {
         res.render('layout', {
             template: 'pages/login',
@@ -10,7 +9,7 @@ module.exports = {
         });
     },
 
-    // Processar login (já existe)
+    // Processar login
     async login(req, res) {
         try {
             const { username, password } = req.body;
@@ -26,6 +25,9 @@ module.exports = {
             req.session.isAdmin = usuario.isAdmin;
             req.session.nome = usuario.nome;
 
+            // Verificar conteúdo da sessão
+            console.log('Sessão após login:', req.session);
+
             res.redirect('/');
         } catch (error) {
             console.error('Erro no login:', error);
@@ -34,14 +36,14 @@ module.exports = {
         }
     },
 
-    // Logout (já existe)
+    // Logout
     logout(req, res) {
         req.session.destroy(() => {
             res.redirect('/login');
         });
     },
 
-    // Middleware para verificar autenticação (já existe)
+    // Middleware para verificar autenticação
     requireAuth(req, res, next) {
         if (!req.session.userId) {
             return res.redirect('/login');
@@ -62,23 +64,20 @@ module.exports = {
         try {
             const { username, password, confirmPassword, nome } = req.body;
 
-            // Validar se as senhas coincidem
             if (password !== confirmPassword) {
                 req.flash('error', 'As senhas não coincidem');
                 return res.redirect('/register');
             }
 
-            // Verificar se o nome de usuário já existe
             const existingUser = await Usuario.findOne({ username });
             if (existingUser) {
                 req.flash('error', 'Nome de usuário já está em uso');
                 return res.redirect('/register');
             }
 
-            // Criar novo usuário
             const newUser = new Usuario({
                 username,
-                password, // A senha será hasheada pelo middleware 'pre' no model
+                password,
                 nome
             });
 
@@ -86,7 +85,6 @@ module.exports = {
 
             req.flash('success', 'Registro realizado com sucesso! Faça login.');
             res.redirect('/login');
-
         } catch (error) {
             console.error('Erro ao registrar usuário:', error);
             req.flash('error', 'Erro ao registrar usuário');
