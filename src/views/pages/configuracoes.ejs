@@ -1,0 +1,89 @@
+<div class="container">
+    <h1 class="mb-4">Configurações do Sistema</h1>
+
+    <% if (typeof error !== 'undefined' && error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total de Estudantes</h5>
+                    <p class="card-text display-6"><%= totalEstudantes %></p>
+                    <form action="/configuracoes/delete-all-estudantes" method="POST">
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja apagar TODOS os estudantes?');">Apagar Todos os Estudantes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total de Designações</h5>
+                    <p class="card-text display-6"><%= totalDesignacoes %></p>
+                    <form action="/configuracoes/delete-all-designacoes" method="POST">
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja apagar TODAS as designações?');">Apagar Todas as Designações</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Estudantes</h3>
+            <table class="table table-sm table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Sala</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% estudantes.forEach(estudante => { %>
+                        <tr>
+                            <td><%= estudante.nome %></td>
+                            <td><%= estudante.email || '-' %></td>
+                            <td><%= estudante.sala || '-' %></td>
+                            <td>
+                                <form action="/configuracoes/delete-estudante/<%= estudante._id %>" method="POST" style="display:inline;">
+                                    <button type="submit" class="btn btn-outline-danger btn-sm" onclick="return confirm('Apagar este estudante?');">Apagar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <h3>Designações</h3>
+            <table class="table table-sm table-striped">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Estudante</th>
+                        <th>Parte</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% designacoes.forEach(designacao => { %>
+                        <tr>
+                            <td><%= designacao.data ? new Date(designacao.data).toLocaleDateString('pt-BR') : '-' %></td>
+                            <td><%= designacao.estudante ? designacao.estudante.nome : '-' %></td>
+                            <td><%= designacao.parte ? designacao.parte.nome : '-' %></td>
+                            <td>
+                                <form action="/configuracoes/delete-designacao/<%= designacao._id %>" method="POST" style="display:inline;">
+                                    <button type="submit" class="btn btn-outline-danger btn-sm" onclick="return confirm('Apagar esta designação?');">Apagar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> 

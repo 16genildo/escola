@@ -1,0 +1,47 @@
+[
+  { "data": "02/04/2025", "sala": "Principal", "parte": 3, "estudante": "JOÃO TIAGO", "ajudante": , "observacao": null },
+  { "data": "02/04/2025", "sala": "Principal", "parte": 4, "estudante": "ALTAMIRO", "ajudante": "MAURO", "observacao": null },
+  { "data": "02/04/2025", "sala": "Principal", "parte": 5, "estudante": "FELIPE", "ajudante": "ALAN", "observacao": null },
+  { "data": "02/04/2025", "sala": "Principal", "parte": 6, "estudante": "MAURICIO", "ajudante": "EVANDRO", "observacao": null },
+
+  { "data": "09/04/2025", "sala": "Principal", "parte": 3, "estudante": "MISAEL", "ajudante": null, "observacao": null },
+  { "data": "09/04/2025", "sala": "Principal", "parte": 4, "estudante": "KÁTIA PATRICIA", "ajudante": "ELISA", "observacao": null },
+  { "data": "09/04/2025", "sala": "Principal", "parte": 5, "estudante": "NILDA AGUIAR", "ajudante": "MARISE", "observacao": null },
+  { "data": "09/04/2025", "sala": "Principal", "parte": 6, "estudante": "GENILDO", "ajudante": , "observacao": null },
+
+  { "data": "16/04/2025", "sala": "Principal", "parte": 3, "estudante": "PEDRO HERINQUE", "ajudante": null, "observacao": null },
+  { "data": "16/04/2025", "sala": "Principal", "parte": 4, "estudante": "NOÉLIA", "ajudante": "SUELEN", "observacao": null },
+  { "data": "16/04/2025", "sala": "Principal", "parte": 5, "estudante": "MARINA ADRIANA", "ajudante": "ROSÁRIO", "observacao": null },
+  { "data": "16/04/2025", "sala": "Principal", "parte": 6, "estudante": "VALDIRENE", "ajudante": "EDITE SOARES", "observacao": null },
+
+  { "data": "30/04/2025", "sala": "Principal", "parte": 3, "estudante": "EZEQUIEL", "ajudante": null, "observacao": null },
+  { "data": "30/04/2025", "sala": "Principal", "parte": 4, "estudante": "DIVA", "ajudante": "EDITE SOARES", "observacao": null },
+  { "data": "30/04/2025", "sala": "Principal", "parte": 5, "estudante": "MARIZETE", "ajudante": "ROSÂNIA", "observacao": null },
+  { "data": "30/04/2025", "sala": "Principal", "parte": 6, "estudante": "LUCIENE", "ajudante": "LETICIA", "observacao": null },
+
+  { "data": "07/05/2025", "sala": "Principal", "parte": 3, "estudante": "ANDERSON", "ajudante": , "observacao": null },
+  { "data": "07/05/2025", "sala": "Principal", "parte": 4, "estudante": "DIVA OLIVEIRA", "ajudante": "JERUSA", "observacao": null },
+  { "data": "07/05/2025", "sala": "Principal", "parte": 5, "estudante": "CONCEIÇÃO PAIXÃO", "ajudante": "EDNALVA CINTRA", "observacao": null },
+  { "data": "07/05/2025", "sala": "Principal", "parte": 6, "estudante": "ANA CRISTINA", "ajudante": "MARLUCIA", "observacao": null },
+  { "data": "07/05/2025", "sala": "Principal", "parte": 7, "estudante": "GISELE", "ajudante": "EDNALVA SOCORRO", "observacao": null },
+
+  { "data": "14/05/2025", "sala": "Principal", "parte": 3, "estudante": "FERNANDO", "ajudante": , "observacao": null },
+  { "data": "14/05/2025", "sala": "Principal", "parte": 4, "estudante": "MARIANDILA", "ajudante": "HILDA", "observacao": null },
+  { "data": "14/05/2025", "sala": "Principal", "parte": 5, "estudante": "TÂNIA PAIXÃO", "ajudante": "CONCEIÇÃO REIS", "observacao": null },
+  { "data": "14/05/2025", "sala": "Principal", "parte": 6, "estudante": "ANDERSON", "ajudante": , "observacao": null },
+
+  { "data": "21/05/2025", "sala": "Principal", "parte": 3, "estudante": "ELIEZER", "ajudante": , "observacao": null },
+  { "data": "21/05/2025", "sala": "Principal", "parte": 4, "estudante": "REGINA PATRICIA", "ajudante": "SENA", "observacao": null },
+  { "data": "21/05/2025", "sala": "Principal", "parte": 5, "estudante": "JAMILE", "ajudante": "JUSSARA", "observacao": null },
+  { "data": "21/05/2025", "sala": "Principal", "parte": 6, "estudante": "GEILSA", "ajudante": "VIVIANE", "observacao": null },
+
+  { "data": "28/05/2025", "sala": "Principal", "parte": 3, "estudante": "DANIEL", "ajudante": , "observacao": null },
+  { "data": "28/05/2025", "sala": "Principal", "parte": 4, "estudante": "EZEQUIEL", "ajudante": "ALAN", "observacao": null },
+  { "data": "28/05/2025", "sala": "Principal", "parte": 5, "estudante": "DAVI", "ajudante": "JOÃO TIAGO", "observacao": null },
+  { "data": "28/05/2025", "sala": "Principal", "parte": 6, "estudante": "GENILDO", "ajudante": "ANTONIO ALCATARA", "observacao": null },
+
+  { "data": "04/06/2025", "sala": "Principal", "parte": 3, "estudante": "PEDRO HERINQUE", "ajudante": null, "observacao": null },
+  { "data": "04/06/2025", "sala": "Principal", "parte": 4, "estudante": "ADELICE", "ajudante": "ALINE RAMOS", "observacao": null },
+  { "data": "04/06/2025", "sala": "Principal", "parte": 5, "estudante": "ELIANA", "ajudante": "VERA", "observacao": null },
+  { "data": "04/06/2025", "sala": "Principal", "parte": 6, "estudante": "JEFERSON", "ajudante": , "observacao": null }
+]

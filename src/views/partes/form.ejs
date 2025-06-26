@@ -1,0 +1,40 @@
+<%- include('../layout') %>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-4">
+                    <%= typeof parte !== 'undefined' ? 'Editar' : 'Nova' %> Parte
+                </h1>
+
+                <form action="<%= typeof parte !== 'undefined' ? '/partes/' + parte._id + '?_method=PUT' : '/partes' %>" 
+                      method="POST">
+                    
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="nome" 
+                               name="nome" 
+                               value="<%= typeof parte !== 'undefined' ? parte.nome : '' %>"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="descricao" class="form-label">Descrição</label>
+                        <textarea class="form-control" 
+                                  id="descricao" 
+                                  name="descricao" 
+                                  rows="3"><%= typeof parte !== 'undefined' ? parte.descricao : '' %></textarea>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <a href="/partes" class="btn btn-outline-secondary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 

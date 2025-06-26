@@ -1,0 +1,116 @@
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Estudantes</h1>
+        <div>
+            <a href="/estudantes/novo" class="btn btn-primary">Novo Estudante</a>
+            <form action="/estudantes/delete-all" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-danger ms-2" onclick="return confirm('Tem certeza que deseja apagar TODOS os estudantes?');">
+                    Apagar Todos
+                </button>
+            </form>
+            <form action="/estudantes/remover-designacoes-orfas" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-warning btn-sm ms-2" onclick="return confirm('Tem certeza que deseja remover todas as designações órfãs (sem estudante ou parte)?');">
+                    Remover Designações Órfãs
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="mb-2" id="contadorSelecionadosEstudantes" style="font-size: 1rem; color: #333;">
+        <span>Estudantes selecionados: <span id="qtdSelecionadosEstudantes">0</span></span>
+    </div>
+
+    <% if (typeof error !== 'undefined') { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    <% } %>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="selectAllEstudantes"></th>
+                    <th>Nome</th>
+                    <th>Gênero</th>
+                    <th>Sala</th>
+                    <th>Total de Designações</th>
+                    <th>Última Designação</th>
+                    <th>Data de Cadastro</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <form id="estudantesTableForm" action="/estudantes/acao-massa" method="POST">
+                <% estudantes.forEach(estudante => { %>
+                    <tr>
+                        <td><input type="checkbox" name="ids[]" value="<%= estudante._id %>"></td>
+                        <td><%= estudante.nome %></td>
+                        <td>
+                            <span class="badge <%= estudante.genero === 'M' ? 'bg-primary' : 'bg-danger' %>">
+                                <%= estudante.genero === 'M' ? 'Masculino' : 'Feminino' %>
+                            </span>
+                        </td>
+                        <td><%= estudante.sala ? `Sala ${estudante.sala}` : '-' %></td>
+                        <td><%= estudante.totalDesignacoes %></td>
+                        <td>
+                            <%= estudante.ultimaDesignacao ? 
+                                new Date(estudante.ultimaDesignacao).toLocaleDateString('pt-BR') : 
+                                'Nunca designado' %>
+                        </td>
+                        <td>
+                            <%= estudante.createdAt ? new Date(estudante.createdAt).toLocaleDateString('pt-BR') : '-' %>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a href="/estudantes/<%= estudante._id %>/editar" 
+                                   class="btn btn-sm btn-outline-primary">Editar</a>
+                                
+                                <form action="/estudantes/<%= estudante._id %>?_method=DELETE" 
+                                      method="POST" 
+                                      style="display: inline;"
+                                      onsubmit="return confirm('Tem certeza que deseja excluir este estudante?');">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">Excluir</button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                <% }) %>
+                </form>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+// Selecionar todos os checkboxes de estudantes
+const selectAllEstudantes = document.getElementById('selectAllEstudantes');
+if (selectAllEstudantes) {
+    selectAllEstudantes.addEventListener('change', function() {
+        document.querySelectorAll('input[name="ids[]"]').forEach(cb => {
+            cb.checked = selectAllEstudantes.checked;
+        });
+        atualizarContadorEstudantes();
+    });
+}
+// Atualizar contador de estudantes selecionados
+function atualizarContadorEstudantes() {
+    const qtd = document.querySelectorAll('input[name="ids[]"]:checked').length;
+    document.getElementById('qtdSelecionadosEstudantes').textContent = qtd;
+}
+document.querySelectorAll('input[name="ids[]"]').forEach(cb => {
+    cb.addEventListener('change', atualizarContadorEstudantes);
+});
+atualizarContadorEstudantes();
+</script>
+
+<style>
+.btn-group .btn {
+    margin-right: 0.25rem;
+}
+
+.badge {
+    font-size: 0.875rem;
+    padding: 0.5em 0.75em;
+}
+</style> 

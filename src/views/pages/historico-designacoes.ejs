@@ -1,0 +1,89 @@
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1 class="card-title mb-0">Histórico de Designações</h1>
+            <div class="btn-group">
+                <a href="/designacoes/historico" 
+                   class="btn <%= !salaFiltro ? 'btn-primary' : 'btn-outline-primary' %>">
+                    Todas
+                </a>
+                <a href="/designacoes/historico?sala=A" 
+                   class="btn <%= salaFiltro === 'A' ? 'btn-primary' : 'btn-outline-primary' %>">
+                    Sala A
+                </a>
+                <a href="/designacoes/historico?sala=B" 
+                   class="btn <%= salaFiltro === 'B' ? 'btn-primary' : 'btn-outline-primary' %>">
+                    Sala B
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% if (datas.length === 0) { %>
+    <div class="alert alert-info">
+        Nenhuma designação avaliada encontrada<%= salaFiltro ? ' para a Sala ' + salaFiltro : '' %>.
+    </div>
+<% } %>
+
+<% datas.forEach(data => { %>
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0">Designações de <%= data.data %></h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Estudante</th>
+                            <th>Parte</th>
+                            <th>Ajudante</th>
+                            <th>Sala</th>
+                            <th>Avaliação</th>
+                            <th>Data da Avaliação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.designacoes.forEach(designacao => { %>
+                            <tr>
+                                <td><%= designacao.estudante.nome %></td>
+                                <td><%= designacao.parte.nome %></td>
+                                <td><%= designacao.ajudante ? designacao.ajudante.nome : '-' %></td>
+                                <td>
+                                    <span class="badge <%= designacao.sala === 'A' ? 'bg-primary' : 'bg-success' %>">
+                                        <%= designacao.sala === 'A' ? 'Salão Principal' : 'Sala B' %>
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-success me-2">
+                                            <%= designacao.avaliacao.pontuacao %>/5
+                                        </span>
+                                        <% if (designacao.avaliacao.comentarios) { %>
+                                            <i class="bi bi-chat-text" 
+                                               data-bs-toggle="tooltip" 
+                                               title="<%= designacao.avaliacao.comentarios %>"></i>
+                                        <% } %>
+                                    </div>
+                                </td>
+                                <td>
+                                    <%= new Date(designacao.avaliacao.data).toLocaleDateString('pt-BR') %>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<% }) %>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});
+</script> 

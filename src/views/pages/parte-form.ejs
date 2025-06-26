@@ -1,0 +1,83 @@
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-4">
+                    <%= parte ? 'Editar' : 'Nova' %> Parte
+                </h1>
+
+                <% if (typeof error !== 'undefined' && error) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= error %>
+                    </div>
+                <% } %>
+
+                <form action="<%= parte && parte._id ? '/partes/' + parte._id + '?_method=PUT' : '/partes' %>" 
+                      method="POST">
+                    
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="nome" 
+                               name="nome" 
+                               value="<%= parte ? parte.nome : '' %>"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="descricao" class="form-label">Descrição</label>
+                        <textarea class="form-control" 
+                                  id="descricao" 
+                                  name="descricao" 
+                                  rows="3"><%= parte ? parte.descricao : '' %></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Gênero Preferido</label>
+                        <div class="d-flex gap-4">
+                            <div class="form-check">
+                                <input class="form-check-input" 
+                                       type="radio" 
+                                       name="generoPreferido" 
+                                       id="generoPreferidoM" 
+                                       value="M"
+                                       <%= parte && parte.generoPreferido === 'M' ? 'checked' : '' %>>
+                                <label class="form-check-label" for="generoPreferidoM">
+                                    Masculino
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" 
+                                       type="radio" 
+                                       name="generoPreferido" 
+                                       id="generoPreferidoF" 
+                                       value="F"
+                                       <%= parte && parte.generoPreferido === 'F' ? 'checked' : '' %>>
+                                <label class="form-check-label" for="generoPreferidoF">
+                                    Feminino
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" 
+                                       type="radio" 
+                                       name="generoPreferido" 
+                                       id="generoPreferidoNull" 
+                                       value=""
+                                       <%= !parte || !parte.generoPreferido ? 'checked' : '' %>>
+                                <label class="form-check-label" for="generoPreferidoNull">
+                                    Qualquer
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <a href="/partes" class="btn btn-outline-secondary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 

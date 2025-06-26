@@ -1,0 +1,18 @@
+[
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "A",
+    "parte": "Parte 3 - leitura",
+    "estudante": "Antônio Alcantara",
+    "ajudante": "Adriana Rosário",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "A",
+    "parte": "Microfone Volante ",
+    "estudante": "Adriana Marques",
+    "ajudante": null,
+    "observacoes": "bora bora"
+  }
+]

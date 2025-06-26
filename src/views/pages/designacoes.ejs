@@ -1,0 +1,183 @@
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Designações</h1>
+        <div>
+            <a href="/designacoes/novo" class="btn btn-primary">Nova Designação</a>
+            <a href="/designacoes/pdf<%= salaFiltro ? '?sala=' + salaFiltro : '' %>" class="btn btn-secondary ms-2">
+                <i class="bi bi-file-pdf"></i> Gerar PDF
+            </a>
+        </div>
+    </div>
+
+    <% if (typeof error !== 'undefined') { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    <% } %>
+
+    <% if (notificacoes && notificacoes.length > 0) { %>
+        <div class="alert alert-info" role="alert">
+            <ul class="mb-0">
+                <% notificacoes.forEach(msg => { %>
+                    <li><%= msg %></li>
+                <% }) %>
+            </ul>
+        </div>
+    <% } %>
+
+    <div class="mb-4">
+        <div class="btn-group" role="group">
+            <a href="/designacoes" 
+               class="btn btn-outline-primary <%= !salaFiltro ? 'active' : '' %>">
+                Todas
+            </a>
+            <a href="/designacoes?sala=A" 
+               class="btn btn-outline-primary <%= salaFiltro === 'A' ? 'active' : '' %>">
+                Sala A
+            </a>
+            <a href="/designacoes?sala=B" 
+               class="btn btn-outline-primary <%= salaFiltro === 'B' ? 'active' : '' %>">
+                Sala B
+            </a>
+        </div>
+    </div>
+
+    <!-- Botões de ação em massa -->
+    <div class="mb-3">
+        <form id="bulkDeleteForm" action="/designacoes/delete-multiple" method="POST" style="display:inline;">
+            <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja apagar as designações selecionadas?');">Apagar Selecionadas</button>
+            <input type="hidden" name="salaFiltro" value="<%= salaFiltro || '' %>">
+        </form>
+        <form action="/designacoes/import-json" method="POST" enctype="multipart/form-data" style="display:inline;">
+            <label class="btn btn-secondary btn-sm ms-2 mb-1">
+                Importar JSON
+                <input type="file" name="file" accept="application/json" style="display:none;" onchange="this.form.submit()">
+            </label>
+        </form>
+        <form action="/designacoes/export-json-basico-estudante" method="GET" style="display:inline;">
+            <button type="submit" class="btn btn-outline-secondary btn-sm ms-2 mb-1">
+                Exportar JSON Básico + Estudante
+            </button>
+        </form>
+        <form id="sendEmailMultipleForm" action="/designacoes/send-email-multiple" method="POST" style="display:inline;">
+            <button type="submit" class="btn btn-success btn-sm ms-2" onclick="return confirm('Deseja enviar email para todas as designações selecionadas?');">Enviar Email para Selecionadas</button>
+        </form>
+    </div>
+
+    <!-- Contador de designações selecionadas -->
+    <div class="mb-2" id="contadorSelecionadas" style="font-size: 1rem; color: #333;">
+        <span>Designações selecionadas: <span id="qtdSelecionadas">0</span></span>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="selectAll"></th>
+                    <th>Data</th>
+                    <th>Sala</th>
+                    <th>Estudante</th>
+                    <th>Parte</th>
+                    <th>Ajudante</th>
+                    <th>Observações</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <form id="designacoesTableForm" action="/designacoes/delete-multiple" method="POST">
+                <% if (!designacoesPorData || designacoesPorData.length === 0) { %>
+                    <tr>
+                        <td colspan="8" class="text-center">Nenhuma designação encontrada</td>
+                    </tr>
+                <% } else { %>
+                    <% designacoesPorData.forEach(([data, designacoes]) => { %>
+                        <% designacoes.forEach(designacao => { %>
+                            <tr>
+                                <td><input type="checkbox" name="ids[]" value="<%= designacao._id %>"></td>
+                                <td><%= data %></td>
+                                <td>Sala <%= designacao.sala %></td>
+                                <td><%= designacao.estudante.nome %></td>
+                                <td><%= designacao.parte.nome %></td>
+                                <td><%= designacao.ajudante ? designacao.ajudante.nome : '-' %></td>
+                                <td><%= designacao.observacoes || '-' %></td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a href="/designacoes/<%= designacao._id %>/editar" 
+                                           class="btn btn-sm btn-outline-primary">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <form action="/designacoes/<%= designacao._id %>?_method=DELETE" 
+                                              method="POST" 
+                                              style="display: inline;"
+                                              onsubmit="return confirm('Tem certeza que deseja excluir esta designação?');">
+                                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                        <% if (!designacao.avaliacao) { %>
+                                            <a href="/designacoes/<%= designacao._id %>/avaliacoes" 
+                                               class="btn btn-sm btn-outline-success">
+                                                <i class="bi bi-check-lg"></i>
+                                            </a>
+                                        <% } %>
+                                        <form action="/designacoes/<%= designacao._id %>/send-email" method="POST" style="display:inline;">
+                                            <button type="submit" class="btn btn-sm btn-outline-success" title="O email já foi enviado. Clique para reenviar.">
+                                                <i class="bi bi-envelope"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    <% }) %>
+                <% } %>
+                </form>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+// Selecionar todos os checkboxes
+const selectAll = document.getElementById('selectAll');
+if (selectAll) {
+    selectAll.addEventListener('change', function() {
+        document.querySelectorAll('input[name="ids[]"]').forEach(cb => {
+            cb.checked = selectAll.checked;
+        });
+        atualizarContador();
+    });
+}
+// Atualizar contador de selecionados
+function atualizarContador() {
+    const qtd = document.querySelectorAll('input[name="ids[]"]:checked').length;
+    document.getElementById('qtdSelecionadas').textContent = qtd;
+}
+document.querySelectorAll('input[name="ids[]"]').forEach(cb => {
+    cb.addEventListener('change', atualizarContador);
+});
+atualizarContador();
+// Submeter o formulário de seleção múltipla ao clicar no botão principal
+const bulkDeleteForm = document.getElementById('bulkDeleteForm');
+if (bulkDeleteForm) {
+    bulkDeleteForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('designacoesTableForm').submit();
+    });
+}
+// Submeter o formulário de envio de email múltiplo
+const sendEmailMultipleForm = document.getElementById('sendEmailMultipleForm');
+if (sendEmailMultipleForm) {
+    sendEmailMultipleForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('designacoesTableForm').action = '/designacoes/send-email-multiple';
+        document.getElementById('designacoesTableForm').submit();
+    });
+}
+</script>
+
+<style>
+.btn-group .btn {
+    margin-right: 0.25rem;
+}
+</style> 

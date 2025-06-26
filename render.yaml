@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: designacao
+    env: node
+    buildCommand: npm install
+    startCommand: node src/app.js
+    nodeVersion: 18.19.0
+    envVars:
+      - key: NODE_ENV
+        value: production 

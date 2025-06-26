@@ -1,0 +1,514 @@
+[
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 3",
+    "estudante": "GENILDO",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 3",
+    "estudante": "ALAN VIANA",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 4",
+    "estudante": "GISELE",
+    "ajudante": "VITORIA LOUVORES",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 4",
+    "estudante": "ADELICE",
+    "ajudante": "HILDA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 5",
+    "estudante": "MARISE",
+    "ajudante": "RITA CELINALVA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 5",
+    "estudante": "ANA CRISTINA",
+    "ajudante": "JUSSARA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 6",
+    "estudante": "TANIA  BATISTA",
+    "ajudante": "ALINE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 6",
+    "estudante": "MAURICIO",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DIRIGENTE / DATA",
+    "estudante": "2025-06-04 00:00:00",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DIRIGENTE / DATA",
+    "estudante": "02/07 /25",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DESIGNAÇÃO",
+    "estudante": "PUBLICADOR",
+    "ajudante": "AJUDANTE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DESIGNAÇÃO",
+    "estudante": "PUBLICADOR",
+    "ajudante": "AJUDANTE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 3",
+    "estudante": "ANTONIO ALCANTARA",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 3",
+    "estudante": "DANIEL",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 4",
+    "estudante": "CARMELICE",
+    "ajudante": "EDITE SOARES",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 4",
+    "estudante": "REGINA",
+    "ajudante": "GEILSA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 5",
+    "estudante": "LUCIENE",
+    "ajudante": "MARIA JOSÉ",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 5",
+    "estudante": "ADRIANA ROSÁRIO",
+    "ajudante": "TÃNIA PAIXÃO",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 6",
+    "estudante": "MARLUCIA",
+    "ajudante": "VALDIRENE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 6",
+    "estudante": "EDNALVA SOCORRO",
+    "ajudante": "NILDA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DIRIGENTE / DATA",
+    "estudante": "11 /06/ 2025",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DIRIGENTE / DATA",
+    "estudante": "16/ 07/ 2025",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DESIGNAÇÃO",
+    "estudante": "PUBLICADOR",
+    "ajudante": "AJUDANTE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DESIGNAÇÃO",
+    "estudante": "PUBLICADOR",
+    "ajudante": "AJUDANTE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 3",
+    "estudante": "PEDRO HENRIQUE",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 3",
+    "estudante": "JEFERSON",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 4",
+    "estudante": "DIVA",
+    "ajudante": "PATRICIA SENA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 4",
+    "estudante": "GEILSA",
+    "ajudante": "RITA DE CASSIA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 5",
+    "estudante": "VERA MARIA",
+    "ajudante": "ELIANA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 5",
+    "estudante": "HELENILZA",
+    "ajudante": "MADALE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 6",
+    "estudante": "ALTAMIRO",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 6",
+    "estudante": "MISAEL",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DIRIGENTE / DATA",
+    "estudante": "RAIMUNDO                                                
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DIRIGENTE / DATA",
+    "estudante": "2025-07-23 00:00:00",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DESIGNAÇÃO",
+    "estudante": "PUBLICADOR",
+    "ajudante": "AJUDANTE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DESIGNAÇÃO",
+    "estudante": "PUBLICADOR",
+    "ajudante": "AJUDANTE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 3",
+    "estudante": "DAVI",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 3",
+    "estudante": "ELIEZER",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 4",
+    "estudante": "ELISA",
+    "ajudante": "MAIANE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 4",
+    "estudante": "ALICIA",
+    "ajudante": "VERÔNICA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 5",
+    "estudante": "EDNALVA CINTRA",
+    "ajudante": "MARINA CAMPOS",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 5",
+    "estudante": "MAIANE",
+    "ajudante": "VIVIANE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 6",
+    "estudante": "ANTONIA AGUIAR",
+    "ajudante": "LETICIA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 6",
+    "estudante": "KATIA",
+    "ajudante": "JACIENE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 7",
+    "estudante": "JAMILE",
+    "ajudante": "RITA FELICIA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DIRIGENTE / DATA",
+    "estudante": "2025-07-30 00:00:00",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DESIGNAÇÃO",
+    "estudante": "PUBLICADOR",
+    "ajudante": "AJUDANTE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 3",
+    "estudante": "ANDERSON",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 4",
+    "estudante": "VITORIA LOUVORES",
+    "ajudante": "CONCEIÇÃO REIS",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 5",
+    "estudante": "GESSICA CINTRA",
+    "ajudante": "REGINA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 6",
+    "estudante": "DIVA GONSALVES",
+    "ajudante": "ROSANGELA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 7",
+    "estudante": "EZEQUIEL",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DIRIGENTE / DATA",
+    "estudante": "2025-08-06 00:00:00",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DESIGNAÇÃO",
+    "estudante": "PUBLICADOR",
+    "ajudante": "AJUDANTE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 3",
+    "estudante": "MISAEL",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 4",
+    "estudante": "RITA CELINALVA",
+    "ajudante": "ALINE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 5",
+    "estudante": "GISELE",
+    "ajudante": "MARISE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 6",
+    "estudante": "EVANDRO",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DIRIGENTE / DATA",
+    "estudante": "2025-08-13 00:00:00",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte DESIGNAÇÃO",
+    "estudante": "PUBLICADOR",
+    "ajudante": "AJUDANTE",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 3",
+    "estudante": "FERNANDO",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 4",
+    "estudante": "EDNALVA CINTRA",
+    "ajudante": "MARLUCIA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 5",
+    "estudante": "VERA MARIA",
+    "ajudante": "HELENILZA",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-26T06:00:00.000Z",
+    "sala": "Principal",
+    "parte": "Parte 6",
+    "estudante": "LETICIA",
+    "ajudante": "PATRICIA SENA",
+    "observacoes": ""
+  }
+]

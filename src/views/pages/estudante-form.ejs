@@ -1,0 +1,88 @@
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-4">
+                    <%= estudante ? 'Editar' : 'Novo' %> Estudante
+                </h1>
+
+                <% if (typeof error !== 'undefined' && error) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= error %>
+                    </div>
+                <% } %>
+
+                <form action="<%= estudante && estudante._id ? '/estudantes/' + estudante._id + '?_method=PUT' : '/estudantes' %>" 
+                      method="POST">
+                    
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="nome" 
+                               name="nome" 
+                               value="<%= estudante ? estudante.nome : '' %>"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email"
+                               class="form-control"
+                               id="email"
+                               name="email"
+                               value="<%= estudante ? estudante.email : '' %>">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Gênero</label>
+                        <div class="d-flex gap-4">
+                            <div class="form-check">
+                                <input class="form-check-input" 
+                                       type="radio" 
+                                       name="genero" 
+                                       id="generoM" 
+                                       value="M"
+                                       <%= estudante && estudante.genero === 'M' ? 'checked' : '' %>
+                                       required>
+                                <label class="form-check-label" for="generoM">
+                                    Masculino
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" 
+                                       type="radio" 
+                                       name="genero" 
+                                       id="generoF" 
+                                       value="F"
+                                       <%= estudante && estudante.genero === 'F' ? 'checked' : '' %>
+                                       required>
+                                <label class="form-check-label" for="generoF">
+                                    Feminino
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="sala" class="form-label">Sala</label>
+                        <select class="form-select" id="sala" name="sala">
+                            <option value="">Selecione uma sala</option>
+                            <option value="A" <%= estudante && estudante.sala === 'A' ? 'selected' : '' %>>
+                                Sala A
+                            </option>
+                            <option value="B" <%= estudante && estudante.sala === 'B' ? 'selected' : '' %>>
+                                Sala B
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <a href="/estudantes" class="btn btn-outline-secondary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 

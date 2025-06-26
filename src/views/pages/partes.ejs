@@ -1,0 +1,49 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Partes</h1>
+    <a href="/partes/novo" class="btn btn-primary">Nova Parte</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Gênero Preferido</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% partes.forEach(parte => { %>
+                <tr>
+                    <td><%= parte.nome %></td>
+                    <td><%= parte.descricao || '-' %></td>
+                    <td>
+                        <% if (parte.generoPreferido === 'M') { %>
+                            <span class="badge bg-primary">Masculino</span>
+                        <% } else if (parte.generoPreferido === 'F') { %>
+                            <span class="badge bg-danger">Feminino</span>
+                        <% } else { %>
+                            <span class="badge bg-secondary">Qualquer</span>
+                        <% } %>
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            <a href="/partes/<%= parte._id %>/editar" class="btn btn-sm btn-outline-primary">Editar</a>
+                            <form action="/partes/<%= parte._id %>?_method=DELETE" method="POST" class="d-inline">
+                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Tem certeza que deseja remover esta parte?')">
+                                    Remover
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            <% }) %>
+            <% if (partes.length === 0) { %>
+                <tr>
+                    <td colspan="4" class="text-center">Nenhuma parte cadastrada</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div> 

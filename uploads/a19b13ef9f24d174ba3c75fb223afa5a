@@ -1,0 +1,223 @@
+[
+  {
+    "_id": "685d55c8f773c6dcbeeae759",
+    "data": "2025-07-02T06:00:00.000Z",
+    "sala": "A",
+    "estudante": {
+      "_id": "68275b236a38a06672cce2d7",
+      "nome": "Genildo de Jesus",
+      "genero": "M",
+      "sala": null,
+      "ultimaDesignacao": "2025-07-02T06:00:00.000Z",
+      "totalDesignacoes": 5,
+      "partesFeitas": [
+        {
+          "data": "2025-05-28T00:00:00.000Z",
+          "parte": "68274d716897f92d79c4e08f",
+          "_id": "6827668b30d0b8beb10e4819"
+        },
+        {
+          "data": "2025-08-06T00:00:00.000Z",
+          "parte": "68274d716897f92d79c4e08f",
+          "_id": "682b9242a981a1c1fc9c1c31"
+        },
+        {
+          "data": "2025-07-02T06:00:00.000Z",
+          "parte": "682757236897f92d79c4e240",
+          "_id": "685d51c13d7dc4b88a42b9d0"
+        },
+        {
+          "data": "2025-07-10T06:00:00.000Z",
+          "parte": "682757236897f92d79c4e240",
+          "_id": "685d532c515a546b38633194"
+        },
+        {
+          "data": "2025-06-27T06:00:00.000Z",
+          "parte": "68274d716897f92d79c4e08f",
+          "_id": "685d546de85ed721c617ee68"
+        },
+        {
+          "data": "2025-07-02T06:00:00.000Z",
+          "parte": "682757236897f92d79c4e240",
+          "_id": "685d55c9f773c6dcbeeae75e"
+        }
+      ],
+      "createdAt": "2025-05-16T15:34:59.335Z",
+      "updatedAt": "2025-06-26T14:14:33.085Z",
+      "__v": 0,
+      "email": "genildo-15@hotmail.com"
+    },
+    "parte": {
+      "_id": "682757236897f92d79c4e240",
+      "nome": "Microfone Volante ",
+      "descricao": "Microfone Volante",
+      "generoPreferido": "M",
+      "createdAt": "2025-05-16T15:17:55.325Z",
+      "__v": 0
+    },
+    "numeroDesignacoes": 4,
+    "precisaAjudante": false,
+    "observacoes": "obrigado que Jeová continue Abençoando!",
+    "ajudante": {
+      "_id": "682925a63f7be3f082eb69ca",
+      "nome": "Antônio Alcantara",
+      "genero": "M",
+      "sala": null,
+      "ultimaDesignacao": "2025-07-30T00:00:00.000Z",
+      "totalDesignacoes": 1,
+      "partesFeitas": [
+        {
+          "data": "2025-07-30T00:00:00.000Z",
+          "parte": "68274d716897f92d79c4e08f",
+          "_id": "682b8f06a981a1c1fc9c179a"
+        }
+      ],
+      "createdAt": "2025-05-18T00:11:18.650Z",
+      "updatedAt": "2025-05-19T20:05:26.088Z",
+      "__v": 0
+    },
+    "createdAt": "2025-06-26T14:14:32.963Z",
+    "updatedAt": "2025-06-26T14:14:32.963Z",
+    "__v": 0
+  },
+  {
+    "_id": "685d603072ccd3f2249a02a4",
+    "data": "2025-06-21T06:00:00.000Z",
+    "sala": "A",
+    "estudante": {
+      "_id": "682929893f7be3f082eb6b94",
+      "nome": "Adriana Rosário",
+      "genero": "F",
+      "sala": null,
+      "ultimaDesignacao": "2025-06-21T06:00:00.000Z",
+      "totalDesignacoes": 2,
+      "partesFeitas": [
+        {
+          "data": "2025-07-02T00:00:00.000Z",
+          "parte": "68274da76897f92d79c4e095",
+          "_id": "682b700ca981a1c1fc9bea67"
+        },
+        {
+          "data": "2025-06-21T06:00:00.000Z",
+          "parte": "68274d716897f92d79c4e08f",
+          "_id": "685d603072ccd3f2249a02ab"
+        }
+      ],
+      "createdAt": "2025-05-18T00:27:53.622Z",
+      "updatedAt": "2025-06-26T14:58:56.681Z",
+      "__v": 0
+    },
+    "parte": {
+      "_id": "68274d716897f92d79c4e08f",
+      "nome": "Parte 3 - leitura",
+      "descricao": "leitura da bíblia",
+      "generoPreferido": "M",
+      "createdAt": "2025-05-16T14:36:33.144Z",
+      "__v": 0
+    },
+    "numeroDesignacoes": 4,
+    "precisaAjudante": false,
+    "observacoes": "",
+    "ajudante": {
+      "_id": "682926873f7be3f082eb6a44",
+      "nome": "Alan Viana",
+      "genero": "M",
+      "sala": null,
+      "ultimaDesignacao": "2025-07-16T00:00:00.000Z",
+      "totalDesignacoes": 2,
+      "partesFeitas": [
+        {
+          "data": "2025-05-21T00:00:00.000Z",
+          "parte": "68274d716897f92d79c4e08f",
+          "_id": "682942c4568b8484b9bc46bd"
+        },
+        {
+          "data": "2025-06-25T00:00:00.000Z",
+          "parte": "68274d716897f92d79c4e08f",
+          "_id": "682b6e72a981a1c1fc9be8f4"
+        },
+        {
+          "data": "2025-07-16T00:00:00.000Z",
+          "parte": "68274d716897f92d79c4e08f",
+          "_id": "682b8ad6a981a1c1fc9c105d"
+        }
+      ],
+      "createdAt": "2025-05-18T00:15:03.927Z",
+      "updatedAt": "2025-05-19T19:47:34.604Z",
+      "__v": 0
+    },
+    "createdAt": "2025-06-26T14:58:56.458Z",
+    "updatedAt": "2025-06-26T14:58:56.458Z",
+    "__v": 0
+  },
+  {
+    "_id": "685d604f72ccd3f2249a031d",
+    "data": "2025-07-11T06:00:00.000Z",
+    "sala": "B",
+    "estudante": {
+      "_id": "68275ba86a38a06672cce2ef",
+      "nome": "Antônia aguiar",
+      "genero": "F",
+      "sala": null,
+      "ultimaDesignacao": "2025-07-11T06:00:00.000Z",
+      "totalDesignacoes": 3,
+      "partesFeitas": [
+        {
+          "data": "2025-05-21T00:00:00.000Z",
+          "parte": "68274d946897f92d79c4e092",
+          "_id": "68275c746a38a06672cce314"
+        },
+        {
+          "data": "2025-06-18T00:00:00.000Z",
+          "parte": "68274db56897f92d79c4e098",
+          "_id": "682b6b61a981a1c1fc9be89b"
+        },
+        {
+          "data": "2025-07-02T00:00:00.000Z",
+          "parte": "68274db56897f92d79c4e098",
+          "_id": "682b8a53a981a1c1fc9c0fc1"
+        },
+        {
+          "data": "2025-07-11T06:00:00.000Z",
+          "parte": "682757236897f92d79c4e240",
+          "_id": "685d604f72ccd3f2249a0322"
+        }
+      ],
+      "createdAt": "2025-05-16T15:37:12.401Z",
+      "updatedAt": "2025-06-26T14:59:27.228Z",
+      "__v": 0
+    },
+    "parte": {
+      "_id": "682757236897f92d79c4e240",
+      "nome": "Microfone Volante ",
+      "descricao": "Microfone Volante",
+      "generoPreferido": "M",
+      "createdAt": "2025-05-16T15:17:55.325Z",
+      "__v": 0
+    },
+    "numeroDesignacoes": 4,
+    "precisaAjudante": false,
+    "observacoes": "",
+    "ajudante": {
+      "_id": "682926593f7be3f082eb6a2c",
+      "nome": "Cleide",
+      "genero": "F",
+      "sala": null,
+      "ultimaDesignacao": "2025-07-02T00:00:00.000Z",
+      "totalDesignacoes": 1,
+      "partesFeitas": [
+        {
+          "data": "2025-07-02T00:00:00.000Z",
+          "parte": "68274da76897f92d79c4e095",
+          "_id": "682b8a12a981a1c1fc9c0f04"
+        }
+      ],
+      "createdAt": "2025-05-18T00:14:17.146Z",
+      "updatedAt": "2025-05-19T19:44:18.639Z",
+      "__v": 0
+    },
+    "createdAt": "2025-06-26T14:59:27.087Z",
+    "updatedAt": "2025-06-26T14:59:27.087Z",
+    "__v": 0
+  }
+]

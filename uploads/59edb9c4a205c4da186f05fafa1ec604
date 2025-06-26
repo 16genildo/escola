@@ -1,0 +1,576 @@
+{
+  "Sala Principal": [
+    {
+      "Numero": "3",
+      "Publicador": "JOÃO TIAGO",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "ALTAMIRO",
+      "Ajudante": "MAURO"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "FELIPE",
+      "Ajudante": "ALAN"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "MAURICIO",
+      "Ajudante": "EVANDRO"
+    },
+    {
+      "Numero": "7",
+      "Publicador": null,
+      "Ajudante": null
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "2025-04-09 00:00:00",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": "AJUDANTE"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "MISAEL",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "KÁTIA",
+      "Ajudante": "PATRICIA ELISA"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "NILDA  AGUIAR",
+      "Ajudante": "MARISE"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "GENILDO",
+      "Ajudante": null
+    },
+    {
+      "Numero": "7",
+      "Publicador": null,
+      "Ajudante": null
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "16 /04/ 2025",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": "AJUDANTE"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "PEDRO HERINQUE",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "NOÉLIA",
+      "Ajudante": "SUELEN"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "MARINA",
+      "Ajudante": "ADRIANA ROSÁRIO"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "VALDIRENE",
+      "Ajudante": "EDITE SOARES"
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "RAIMUNDO                                                30/04/2025",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": "AJUDANTE"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "EZEQUIEL",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "DIVA",
+      "Ajudante": "EDITE SOARES"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "MARIZETE",
+      "Ajudante": "ROSÂNIA"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "LUCIENE",
+      "Ajudante": "LETICIA"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "ANDERSON",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "DIVA OLIVEIRA",
+      "Ajudante": "JERUSA"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "CONCEIÇÃO PAIXÃO",
+      "Ajudante": "EDNALVA CINTRA"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "ANA CRISTINA",
+      "Ajudante": "MARLUCIA"
+    },
+    {
+      "Numero": "7",
+      "Publicador": "GISELE",
+      "Ajudante": "EDNALVA SOCORRO"
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "14/05 /25",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": "AJUDANTE"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "FERNADO",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "MARIANDILA",
+      "Ajudante": "HILDA"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "TÂNIA PAIXÂO",
+      "Ajudante": "CONCEIÇÃO REIS"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "ANDERSON",
+      "Ajudante": null
+    },
+    {
+      "Numero": "7",
+      "Publicador": null,
+      "Ajudante": null
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "21/ 05/ 2024",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": "AJUDANTE"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "ELIEZER",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "REGINA",
+      "Ajudante": "PATRICIA SENA"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "JAMILE",
+      "Ajudante": "JUSSARA"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "GEILSA",
+      "Ajudante": "VIVIANE"
+    },
+    {
+      "Numero": "7",
+      "Publicador": null,
+      "Ajudante": null
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "2025-05-28 00:00:00",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": "AJUDANTE"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "DANIEL",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "EZEQUIEL",
+      "Ajudante": "ALAN"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "DAVI",
+      "Ajudante": "JOÃO TIAGO"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "GENILDO",
+      "Ajudante": "ANTONIO ALCATARA"
+    },
+    {
+      "Numero": "7",
+      "Publicador": null,
+      "Ajudante": null
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "2025-06-04 00:00:00",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": "AJUDANTE"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "PEDRO  HERINQUE",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "ADELICE",
+      "Ajudante": "ALINE RAMOS"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "ELIANA",
+      "Ajudante": "VERA"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "JEFERSON",
+      "Ajudante": null
+    },
+    {
+      "Numero": "7",
+      "Publicador": null,
+      "Ajudante": null
+    }
+  ],
+  "Sala B": [
+    {
+      "Numero": "3",
+      "Publicador": "ANTONIO ALCANTARA",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "ADELICE",
+      "Ajudante": "MAIANE"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "ADRIANA MARQUES",
+      "Ajudante": "ALICIA"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "VERA",
+      "Ajudante": "FATIMA"
+    },
+    {
+      "Numero": "7",
+      "Publicador": null,
+      "Ajudante": null
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "CARLOS         09/04/2025",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": "AJUDANTE"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "MAURICIO",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "ANTONIA AGUIAR",
+      "Ajudante": "CLEIDE"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "ROSÂGELA FREIRE",
+      "Ajudante": "RITA CELINALVA"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "ALAN VIANA",
+      "Ajudante": null
+    },
+    {
+      "Numero": "7",
+      "Publicador": null,
+      "Ajudante": null
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "2025-04-16 00:00:00",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": "AJUDANTE"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "JEFERSON",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "HELENILZA",
+      "Ajudante": "JERUSA"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "CONCEIÇÃO REIS",
+      "Ajudante": "CRISTINA CÂNDIDA"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "RITA DE CASSIA",
+      "Ajudante": "MARIA JOSÉ"
+    },
+    {
+      "Numero": "7",
+      "Publicador": null,
+      "Ajudante": null
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "2025-04-30 00:00:00",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": null
+    },
+    {
+      "Numero": "3",
+      "Publicador": "MISAEL",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "VITÓRIA LOUVORES",
+      "Ajudante": "GEILSA"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "EDNALVA SOCORRO",
+      "Ajudante": "MARISE"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "GESSICA CINTRA",
+      "Ajudante": "JACIENE"
+    },
+    {
+      "Numero": "7",
+      "Publicador": null,
+      "Ajudante": null
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "2025-05-07 00:00:00",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": "AJUDANTE"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "EVANDRO",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "MARIA MADALI",
+      "Ajudante": "VERA"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "ELISA",
+      "Ajudante": "RITA CELINALVA"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "KÁTIA",
+      "Ajudante": "ALINE"
+    },
+    {
+      "Numero": "7",
+      "Publicador": "OLIVIA",
+      "Ajudante": "LETICIA"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "JOÃO TIAGO",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "EDNALVA CINTRA",
+      "Ajudante": "SUELI"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "NILDA",
+      "Ajudante": "TÂNIA BATISTA"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "ELIEZER",
+      "Ajudante": null
+    },
+    {
+      "Numero": "7",
+      "Publicador": null,
+      "Ajudante": null
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "ADRIANO                                    21/05/2025",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": "AJUDANTE"
+    },
+    {
+      "Numero": "3",
+      "Publicador": "ALAN VIANA",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "VALDIRENE",
+      "Ajudante": "ADELICE"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "RITA FELICIA",
+      "Ajudante": "HELENILZA"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "ADRIANA ROSÁRIO",
+      "Ajudante": "EDITE SOARES"
+    },
+    {
+      "Numero": "7",
+      "Publicador": null,
+      "Ajudante": null
+    },
+    {
+      "Numero": "DIRIGENTE / DATA",
+      "Publicador": "2025-05-28 00:00:00",
+      "Ajudante": null
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "PUBLICADOR",
+      "Ajudante": null
+    },
+    {
+      "Numero": "3",
+      "Publicador": "MAURICIO",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "ALICIA",
+      "Ajudante": "ANA CRISTINA"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "PATRICIA ELISA",
+      "Ajudante": "MARLUCIA"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "CARMELICE",
+      "Ajudante": "TÂNIA PAIXÃO"
+    },
+    {
+      "Numero": "DESIGNAÇÃO",
+      "Publicador": "2025-06-04 00:00:00",
+      "Ajudante": null
+    },
+    {
+      "Numero": null,
+      "Publicador": "PUBLICADOR",
+      "Ajudante": null
+    },
+    {
+      "Numero": "3",
+      "Publicador": "DAVI",
+      "Ajudante": null
+    },
+    {
+      "Numero": "4",
+      "Publicador": "MARIZETE",
+      "Ajudante": "MARIADILA"
+    },
+    {
+      "Numero": "5",
+      "Publicador": "LUCIENE",
+      "Ajudante": "ROSÂNGELA"
+    },
+    {
+      "Numero": "6",
+      "Publicador": "ELIEZER",
+      "Ajudante": null
+    }
+  ]
+}

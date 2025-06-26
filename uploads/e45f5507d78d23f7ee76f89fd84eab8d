@@ -1,0 +1,162 @@
+[
+  {
+    "data": "2025-05-28T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 3",
+    "estudante": "Misael",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-05-28T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 4",
+    "estudante": "Valdirene",
+    "ajudante": "Maria José",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-05-28T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 5",
+    "estudante": "Helenilza",
+    "ajudante": "Regina",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-05-28T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 6",
+    "estudante": "Maiane",
+    "ajudante": "Conceição Reis",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-04T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 3",
+    "estudante": "Fernando",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-04T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 4",
+    "estudante": "Adelice",
+    "ajudante": "Adriana Marques",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-04T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 5",
+    "estudante": "Tania",
+    "ajudante": "Paixão Jerusa",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-04T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 6",
+    "estudante": "Adriana Rosário",
+    "ajudante": "Rosangela",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-11T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 3",
+    "estudante": "Evandro",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-11T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 4",
+    "estudante": "Gessica",
+    "ajudante": "Cintra Patricia Elisa",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-11T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 5",
+    "estudante": "Luciene",
+    "ajudante": "Marina Campos",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-11T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 6",
+    "estudante": "Jeferson",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-18T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 3",
+    "estudante": "Eliezer",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-18T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 4",
+    "estudante": "Alicia",
+    "ajudante": "Rita Celinalva",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-18T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 5",
+    "estudante": "Katia",
+    "ajudante": "Vera Maria",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-18T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 6",
+    "estudante": "Marizete",
+    "ajudante": "Ana Cristina",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-25T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 3",
+    "estudante": "Anderson",
+    "ajudante": "",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-25T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 4",
+    "estudante": "Maria José",
+    "ajudante": "Marlucia",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-25T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 5",
+    "estudante": "Jussara",
+    "ajudante": "Diva Gonsalves",
+    "observacoes": ""
+  },
+  {
+    "data": "2025-06-25T06:00:00.000Z",
+    "sala": "Sala B",
+    "parte": "Parte 6",
+    "estudante": "Jeferson",
+    "ajudante": "",
+    "observacoes": ""
+  }
+]
