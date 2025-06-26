@@ -2,8 +2,7 @@ const mongoose = require('mongoose');
 
 const parteSchema = new mongoose.Schema({
   nome: { 
-    type: String, 
-    required: true 
+    type: String
   },
   descricao: String,
   generoPreferido: {

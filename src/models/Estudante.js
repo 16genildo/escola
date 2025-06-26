@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const estudanteSchema = new mongoose.Schema({
   nome: { 
     type: String, 
-    required: true,
     trim: true
   },
   email: {
@@ -15,7 +14,6 @@ const estudanteSchema = new mongoose.Schema({
   },
   genero: {
     type: String,
-    required: true,
     enum: ['M', 'F']
   },
   sala: { 

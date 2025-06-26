@@ -19,26 +19,21 @@ const avaliacaoSchema = new mongoose.Schema({
 
 const designacaoSchema = new mongoose.Schema({
   data: { 
-    type: Date, 
-    required: true
+    type: Date
   },
   sala: {
-    type: String,
-    required: true
+    type: String
   },
   estudante: { 
     type: mongoose.Schema.Types.ObjectId, 
-    ref: 'Estudante',
-    required: true
+    ref: 'Estudante'
   },
   parte: { 
     type: mongoose.Schema.Types.ObjectId, 
-    ref: 'Parte',
-    required: true
+    ref: 'Parte'
   },
   numeroDesignacoes: {
     type: String,
-    required: true,
     default: ''
   },
   precisaAjudante: {

@@ -166,8 +166,8 @@ ${ajudante ? 'Ajudante: ' + ajudante.nome + '\n' : ''}${designacaoData.observaco
                     await sendMail({
                         to: ajudante.email,
                         subject: 'Você foi designado como ajudante',
-                        text: `Olá, ${ajudante.nome}!\n\nVocê foi designado como ajudante.\n${detalhes}${agradecimento}`,
-                        html: `<p>Olá, <b>${ajudante.nome}</b>!</p><p>Você foi designado como ajudante:</p>${detalhesHtml}${agradecimentoHtml}`
+                        text: `Olá, ${ajudante.nome}!\n\nVocê foi designado como ajudante do estudante ${estudante ? estudante.nome : '-'}!\n${detalhes}${agradecimento}`,
+                        html: `<p>Olá, <b>${ajudante.nome}</b>!</p><p>Você foi designado como ajudante do estudante <b>${estudante ? estudante.nome : '-'}</b>:</p>${detalhesHtml}${agradecimentoHtml}`
                     });
                     notificacoes.push('Email enviado para o ajudante.');
                 } catch (emailErr) {
@@ -436,8 +436,8 @@ ${ajudante ? 'Ajudante: ' + ajudante.nome + '\n' : ''}${designacaoData.observaco
                     await sendMail({
                         to: designacao.ajudante.email,
                         subject: 'Você foi designado como ajudante',
-                        text: `Olá, ${designacao.ajudante.nome}!\n\nVocê foi designado como ajudante.\n${detalhes}${agradecimento}`,
-                        html: `<p>Olá, <b>${designacao.ajudante.nome}</b>!</p><p>Você foi designado como ajudante:</p>${detalhesHtml}${agradecimentoHtml}`
+                        text: `Olá, ${designacao.ajudante.nome}!\n\nVocê foi designado como ajudante do estudante ${designacao.estudante ? designacao.estudante.nome : '-'}!\n${detalhes}${agradecimento}`,
+                        html: `<p>Olá, <b>${designacao.ajudante.nome}</b>!</p><p>Você foi designado como ajudante do estudante <b>${designacao.estudante ? designacao.estudante.nome : '-'}</b>:</p>${detalhesHtml}${agradecimentoHtml}`
                     });
                     notificacoes.push('Email reenviado para o ajudante.');
                 } catch (emailErr) {
@@ -505,8 +505,8 @@ ${ajudante ? 'Ajudante: ' + ajudante.nome + '\n' : ''}${designacaoData.observaco
                                 await sendMail({
                                     to: designacao.ajudante.email,
                                     subject: 'Você foi designado como ajudante',
-                                    text: `Olá, ${designacao.ajudante.nome}!\n\nVocê foi designado como ajudante.\n${detalhes}${agradecimento}`,
-                                    html: `<p>Olá, <b>${designacao.ajudante.nome}</b>!</p><p>Você foi designado como ajudante:</p>${detalhesHtml}${agradecimentoHtml}`
+                                    text: `Olá, ${designacao.ajudante.nome}!\n\nVocê foi designado como ajudante do estudante ${designacao.estudante ? designacao.estudante.nome : '-'}!\n${detalhes}${agradecimento}`,
+                                    html: `<p>Olá, <b>${designacao.ajudante.nome}</b>!</p><p>Você foi designado como ajudante do estudante <b>${designacao.estudante ? designacao.estudante.nome : '-'}</b>:</p>${detalhesHtml}${agradecimentoHtml}`
                                 });
                                 notificacoes.push(`Email enviado para o ajudante ${designacao.ajudante.nome}.`);
                             } catch (emailErr) {
@@ -626,8 +626,8 @@ ${ajudante ? 'Ajudante: ' + ajudante.nome + '\n' : ''}${designacaoData.observaco
                                 await sendMail({
                                     to: ajudante.email,
                                     subject: 'Você foi designado como ajudante',
-                                    text: `Olá, ${ajudante.nome}!\n\nVocê foi designado como ajudante.\n${detalhes}${agradecimento}`,
-                                    html: `<p>Olá, <b>${ajudante.nome}</b>!</p><p>Você foi designado como ajudante:</p>${detalhesHtml}${agradecimentoHtml}`
+                                    text: `Olá, ${ajudante.nome}!\n\nVocê foi designado como ajudante do estudante ${estudanteDoc ? estudanteDoc.nome : '-'}!\n${detalhes}${agradecimento}`,
+                                    html: `<p>Olá, <b>${ajudante.nome}</b>!</p><p>Você foi designado como ajudante do estudante <b>${estudanteDoc ? estudanteDoc.nome : '-'}</b>:</p>${detalhesHtml}${agradecimentoHtml}`
                                 });
                                 notificacoes.push(`Email enviado para o ajudante ${ajudante.nome}.`);
                             } catch (emailErr) {
